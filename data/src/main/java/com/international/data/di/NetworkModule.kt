@@ -1,6 +1,6 @@
 package com.international.data.di
 
-import com.international.data.remote.ArticalsAPI
+import com.international.data.remote.ArticleAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,13 +27,13 @@ class NetworkModule {
 
 
     @Provides
-    fun provideApiClient(okHttpClient: OkHttpClient): ArticalsAPI =
+    fun provideApiClient(okHttpClient: OkHttpClient): ArticleAPI =
         Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://api.nytimes.com/svc/mostpopular/v2/")
             .client(okHttpClient)
             .build()
-            .create(ArticalsAPI::class.java)
+            .create(ArticleAPI::class.java)
 
 
     @Provides

@@ -1,7 +1,7 @@
 package com.international.data.di
 
-import com.international.data.repository.ArticalsRepositoryImpl
-import com.international.domain.repository.ArticalRepository
+import com.international.data.repository.ArticleRepositoryImpl
+import com.international.domain.repository.ArticleRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,7 +13,7 @@ import javax.inject.Singleton
 abstract class RepositoryModule {
     @Binds
     @Singleton
-    abstract fun provideArticalRepository(articalsRepositoryImpl: ArticalsRepositoryImpl): ArticalRepository
+    abstract fun provideArticleRepository(articleRepositoryImpl: ArticleRepositoryImpl): ArticleRepository
 
 
 

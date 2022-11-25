@@ -2,7 +2,7 @@ package com.international.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class ArticalResponse(
+data class ArticleResponse(
 
 	@field:SerializedName("copyright")
 	val copyright: String? = null,
